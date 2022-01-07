@@ -1,6 +1,7 @@
 
 require("dotenv").config();
 require("./config/mongodb.js");
+const hbs = require('hbs');
 
 var createError = require("http-errors");
 var express = require("express");
@@ -12,13 +13,16 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var myDevSquadRouter = require("./routes/my-dev-squad");
 var addNewIronhacker = require("./routes/add-new-ironhacker");
-var apiIronhackers = require("./routes/api/ironhacker")
+var apiIronhackers = require("./routes/api/ironhacker");
+const { hasSubscribers } = require("diagnostics_channel");
 
 var app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
+
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
 app.use(logger("dev"));
 app.use(express.json());
