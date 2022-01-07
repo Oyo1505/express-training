@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-image: url(https://m.media-amazon.com/images/I/41+aip+p-zL._AC_SX425_.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
