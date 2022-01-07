@@ -1,6 +1,9 @@
 # Dependency directory
 node_modules
 
+# Mac files
+.DS_Store
+
 # Debug log from npm
 npm-debug.log
 
@@ -11,3 +14,6 @@ npm-debug.log
 # For maintenance purposes - not best practice
 
 package-lock.json
+yarn.lock
+*.vscode
+*.log
